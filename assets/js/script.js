@@ -307,21 +307,6 @@ function encerramento(){
     }, 300);
 }
 
-
-function irParaOutroSite() {
-    let body = document.getElementById('body');
-    
-    // Iniciar animação de desvanecimento
-    body.style.opacity = '0';
-    
-    setTimeout(function() {
-        window.location.href = "premio.html";
-    }, 1000); // Espera a duração da animação de desvanecimento
-}
-
-
-
-link.addEventListener('click', irParaOutroSite)
 elton.addEventListener('click', iniciarCharada)
 btCerto.addEventListener('click', iniciarSegundaCharada)
 btCerto2.addEventListener('click', iniciarTerceiraCharada)
