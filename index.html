@@ -18,7 +18,7 @@
     <script src="assets/js/slider.js" defer></script>
     <script src="assets/js/script.js" defer></script>
 </head>
-<body>
+<body id="body">
     
     <!-- INÍCIO CABEÇALHO -->
     <header id="inicio">
@@ -195,42 +195,40 @@
                 <div class="carrossel swiper-wrapper">
                     <!-- SLIDES -->
                     <div class="humano swiper-slide">
-                        <img src="assets/img/alunos/leonardo.webp" alt="Aluno do SESI-SENAI">
+                        <img src="assets/img/alunos/leonardo.webp" alt="Professor do SESI-SENAI">
                         <p>Daniel</p>
                     </div>
                     <div class="humano swiper-slide">
-                        <img src="assets/img/alunos/raphael.webp" alt="Aluno do SESI-SENAI">
+                        <img src="assets/img/alunos/raphael.webp" alt="Professor do SESI-SENAI">
                         <p>Larissa</p>
                     </div>
                     <div class="humano swiper-slide">
-                        <img src="assets/img/alunos/donatello.webp" alt="Aluno do SESI-SENAI">
+                        <img src="assets/img/alunos/donatello.webp" alt="Professor do SESI-SENAI">
                         <p>Maristela</p>
                     </div>
                     <div class="humano swiper-slide">
-                        <img src="assets/img/alunos/michelangelo.webp" alt="Aluno do SESI-SENAI">
+                        <img src="assets/img/alunos/michelangelo.webp" alt="Professor do SESI-SENAI">
                         <p>Monica</p>
                     </div>
                     <div class="humano swiper-slide">
-                        <img src="assets/img/alunos/leonardo.webp" alt="Aluno do SESI-SENAI">
+                        <img src="assets/img/alunos/leonardo.webp" alt="Professor do SESI-SENAI">
                         <p>Paola</p>
                     </div>
                     <div class="humano swiper-slide">
-                        <img src="assets/img/alunos/raphael.webp" alt="Aluno do SESI-SENAI">
+                        <img src="assets/img/alunos/raphael.webp" alt="Professor do SESI-SENAI">
                         <p>Amanda</p>
                     </div>
                     <div class="humano swiper-slide">
-                        <img src="assets/img/alunos/michelangelo.webp" alt="Aluno do SESI-SENAI">
+                        <img src="assets/img/alunos/michelangelo.webp" alt="Professor do SESI-SENAI">
                         <p>Natália</p>
                     </div>
                     <div class="humano swiper-slide">
-                        <img src="assets/img/alunos/donatello.webp" alt="Aluno do SESI-SENAI">
+                        <img src="assets/img/alunos/donatello.webp" alt="Professor do SESI-SENAI">
                         <p>Leonardo</p>
                     </div>
                     <div class="humano swiper-slide" id="elton">
-                        <img src="assets/img/alunos/michelangelo.webp" id="elton-img" alt="Aluno do SESI-SENAI">
-                        <a href="#">
-                            <p>Elton</p>
-                        </a>
+                        <img src="assets/img/alunos/michelangelo.webp" alt="Professor do SESI-SENAI">
+                        <p>Elton</p>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -240,12 +238,120 @@
         </div>
 
 
+        <!-- INSERINDO A CHARADA -->
+        
+        <div class="escuro hidden"></div>
+
+        <!-- CHARADA 1 -->
+        <div class="ch-titulo ch-tit1 hidden">     
+            <h1>Charada Secreta</h1>
+        </div>
+        <div class="charada charada1 hidden">
+            <h1 class="titulo-charada">Charada 1</h1>
+            <p class="text-charada">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolor vel doloremque vero. Numquam, amet tempore quae quibusdam, voluptas dolorem mollitia officia quaerat nemo laudantium nam quisquam laboriosam asperiores praesentium.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit architecto dolorum, eum ut optio ipsam voluptates beatae quis laboriosam mollitia labore blanditiis excepturi eius consequatur quaerat eos quam officia! Odit.
+            </p>
+            
+            <div class="bts-charada">    
+                <button id="bt1" class="bt">Não sei que lá, não sei que lá!</button>
+                <button id="bt2" class="bt">Aí cê me quebra!</button>
+                <button id="bt-certo" class="bt">Essa opção está errada!</button>
+            </div>
+        </div>
+        <div class="ch-titulo ch-acertou greenLight hidden">
+            <h1>Acertou!</h1>
+            <p>Mestre da sabedoria, melzinho!</p>
+        </div>
+        <div class="ch-titulo ch-tit2 hidden">
+            <h1>Segunda charada!</h1>
+        </div>
+        
+        <!-- FIM CHARADA 1 -->
+
+        <!-- CHARADA 2 -->
+        <div class="charada charada2 hidden">
+            <h1 class="titulo-charada">Charada 2</h1>
+            <p class="text-charada">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolor vel doloremque vero. Numquam, amet tempore quae quibusdam, voluptas dolorem mollitia officia quaerat nemo laudantium nam quisquam laboriosam asperiores praesentium.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit architecto dolorum, eum ut optio ipsam voluptates beatae quis laboriosam mollitia labore blanditiis excepturi eius consequatur quaerat eos quam officia! Odit.
+            </p>
+            
+            <div class="bts-charada">    
+                <button id="bt4" class="bt">Não sei que lá, não sei que lá!</button>
+                <button id="bt5" class="bt">Aí cê me quebra!</button>
+                <button id="bt-certo2" class="bt">Essa opção está errada!</button>
+            </div>
+        </div>
+        <div class="ch-titulo ch-acertou2 greenLight hidden">
+            <h1>Acertou!</h1>
+            <p>É o mestre do design mesmo!</p>
+        </div>
+        <div class="ch-titulo ch-tit3 hidden">
+            <h1>Terceira charada!</h1>
+        </div>
+        
+        
+        <!-- FIM DA CHARADA 2 -->
+
+        <!-- CHARADA 3 -->
+        <div class="charada charada3 hidden">
+            <h1 class="titulo-charada">Charada 3</h1>
+            <p class="text-charada">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolor vel doloremque vero. Numquam, amet tempore quae quibusdam, voluptas dolorem mollitia officia quaerat nemo laudantium nam quisquam laboriosam asperiores praesentium.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit architecto dolorum, eum ut optio ipsam voluptates beatae quis laboriosam mollitia labore blanditiis excepturi eius consequatur quaerat eos quam officia! Odit.
+            </p>
+            
+            <div class="bts-charada">    
+                <button id="bt7" class="bt">Não sei que lá, não sei que lá!</button>
+                <button id="bt8" class="bt">Aí cê me quebra!</button>
+                <button id="bt-certo3" class="bt">Essa opção está errada!</button>
+            </div>
+        </div>
+        <div class="ch-titulo ch-acertou3 greenLight hidden">
+            <h1>Acertou!</h1>
+            <p>Só quem acha o Canva melhor que o Illustrator acerta essa!</p>
+        </div>
+        <div class="ch-titulo ch-tit4 hidden">
+            <h1>Quarta charada!</h1>
+        </div>
+        
+        <!-- FIM DA CHARADA 3 -->
+
+        <!-- CHARADA 4 -->
+        <div class="charada charada4 hidden">
+            <h1 class="titulo-charada">Charada 4</h1>
+            <p class="text-charada">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolor vel doloremque vero. Numquam, amet tempore quae quibusdam, voluptas dolorem mollitia officia quaerat nemo laudantium nam quisquam laboriosam asperiores praesentium.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit architecto dolorum, eum ut optio ipsam voluptates beatae quis laboriosam mollitia labore blanditiis excepturi eius consequatur quaerat eos quam officia! Odit.
+            </p>
+            
+            <div class="bts-charada">    
+                <button id="bt10" class="bt">Não sei que lá, não sei que lá!</button>
+                <button id="bt11" class="bt">Aí cê me quebra!</button>
+                <button id="bt-certo4" class="bt">Essa opção está errada!</button>
+            </div>
+        </div>
+        <div class="ch-titulo ch-acertou4 greenLight hidden">
+            <h1>Acertou!</h1>
+            <p>Feraaaaaaaaa Eltinho, tu é moxxxtro!</p>
+        </div>
+        <div class="ch-titulo ch-tit5 hidden">
+            <h1>Melzinho!</h1>
+        </div>
+        <div class="pagina-especial hidden">
+            <h2>Que tal receber um prêmio por tamanha genialidade?</h1>
+            <p class="link">Abrir</p>
+        </div>
+        
+        <!-- FIM DA CHARADA 3 -->
+        
     </main>
     <!-- FIM CONTEÚDO -->
-
+    
     <!-- INÍCIO RODAPÉ -->
     <footer>
-
+        
         <div class="redes-sociais">
             <p>Terceirão Wakanda</p>
             <a id="icone" title="@equipe_wakanda3" href="https://www.instagram.com/equipe_wakanda3/"><i class="fa-brands fa-instagram fa-xl"></i></a>

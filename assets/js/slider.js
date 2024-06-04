@@ -16,19 +16,22 @@ let swiper = new Swiper(".slide-content", {
     breakpoints: {
         0: {
             slidesPerView: 1,
+            slidesPerGroup: 1,
         },
         520: {
             slidesPerView: 2,
+            slidesPerGroup: 2,
         },
         750: {
             slidesPerView: 3,
+            slidesPerGroup: 3,
         },
         950: {
             slidesPerView: 4,
         },
     },
     autoplay: {
-        delay: 5000,
+        delay: 6000,
     },
 });
 
@@ -47,15 +50,18 @@ let swiper2 = new Swiper(".slide-content2", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    breakpoints: {
+      breakpoints: {
         0: {
             slidesPerView: 1,
+            slidesPerGroup: 1,
         },
         520: {
             slidesPerView: 2,
+            slidesPerGroup: 2,
         },
         750: {
             slidesPerView: 3,
+            slidesPerGroup: 3,
         },
         950: {
             slidesPerView: 4,

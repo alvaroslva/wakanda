@@ -14,6 +14,13 @@ html {
 
 body{
     background-color: black;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+body2{
+    background-color: black;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 /* CABEÇALHO */
@@ -137,6 +144,11 @@ div.humano p{
 }
 
 
+#elton:hover{
+    filter: brightness(110%);
+    cursor: pointer;
+}
+
 /* RODAPÉ */
 
 footer{
@@ -176,5 +188,181 @@ p#arroba{
 }
 
 #icone:hover i {
+    color: white;
+}
+
+
+
+/* charada */
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 0.5s ease;
+}
+
+.visible{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.escuro{
+    background-color: rgba(0, 0, 0, 0.564);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    backdrop-filter: blur(15px); /* Desfoque do fundo */
+    transition: all 0.5s ease;
+}
+
+.fundoGreen{
+    background-color: rgb(3, 157, 0);
+}
+
+.fundoRed{
+    background-color: rgb(157, 0, 0);
+}
+
+.ch-titulo{
+    background-image: linear-gradient(to bottom right, rgba(128, 0, 94, 0.8), rgba(50, 0, 121, 0.8));
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 600px;
+    z-index: 9999;
+    
+    padding: 50px 100px;
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 50px;
+}
+
+.greenLight h1{
+    color: rgb(72, 250, 72);
+}
+
+.ch-titulo p{
+    font-size: 30px;
+    color: rgb(175, 175, 175);
+}
+
+.charada{
+    background-image: linear-gradient(to bottom right, rgba(128, 0, 94, 0.8), rgba(50, 0, 121, 0.8));
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 600px;
+    z-index: 9999;
+
+    padding: 50px 100px;
+    border-radius: 10px;
+}
+
+.charada .titulo-charada{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.charada .text-charada{
+    text-align: justify;
+    text-indent: 30px;
+}
+
+
+.bts-charada{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.ch-acertou{
+    color: rgb(0, 203, 0);
+}
+
+button.bt{
+    color: black;
+    background-color: white;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.btGreen{
+    background-color: rgb(50, 255, 50) !important;
+}
+
+.btRed{
+    background-color: rgb(255, 50, 50) !important;
+}
+
+button.bt:hover{
+    background-color: rgb(255, 195, 255);
+    scale: 1.02;
+}
+
+
+
+/* premio */
+
+.pagina-especial{
+    background-image: linear-gradient(to bottom right, rgba(128, 0, 94, 0.8), rgba(50, 0, 121, 0.8));
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 600px;
+    z-index: 9999;
+    
+    padding: 50px 100px;
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 50px;
+    gap: 30px;
+}
+
+.pagina-especial h2{
+    font-size: 50px;
+}
+
+.pagina-especial a{
+    background-color: white;
+    color: purple;
+    text-decoration: none;
+    padding: 5px 45px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 30px;
+    transition: all .2s ease;
+}
+
+.pagina-especial a:hover{
+    background-color: rgb(199, 0, 199);
     color: white;
 }
