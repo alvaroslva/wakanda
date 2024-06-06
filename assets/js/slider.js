@@ -38,7 +38,7 @@ let swiper = new Swiper(".slide-content", {
 let swiper2 = new Swiper(".slide-content2", {
     slidesPerView: 4,
     spaceBetween: 20,
-    slidesPerGroup: 3,
+    slidesPerGroup: 2,
     centerSlide: 'true',
     fade: 'true',
     grabCursor: 'true',

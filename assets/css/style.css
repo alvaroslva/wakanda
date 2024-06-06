@@ -17,11 +17,6 @@ body{
     transition: opacity 1s ease-in-out;
     opacity: 1;
 }
-body2{
-    background-color: black;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
 
 /* CABEÇALHO */
 
@@ -32,6 +27,7 @@ nav ul img{
 nav{
     background-color: black;
     width: 100%;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.381);
 }
 
 nav ul{
@@ -219,6 +215,21 @@ p#arroba{
     transition: all 0.5s ease;
 }
 
+.fechar{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: purple;
+    z-index: 999;
+    transition: all 0.5s ease;
+}
+
 .fundoGreen{
     background-color: rgb(3, 157, 0);
 }
@@ -278,8 +289,12 @@ p#arroba{
 }
 
 .charada .text-charada{
-    text-align: justify;
+    font-size: larger;
     text-indent: 30px;
+}
+
+.center{
+    text-align: center;
 }
 
 
