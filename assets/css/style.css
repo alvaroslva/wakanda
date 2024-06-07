@@ -220,7 +220,7 @@ p#arroba{
     font-size: 25px;
     cursor: pointer;
     border-radius: 30px;
-    background-color: purple;
+    background-color: rgba(128, 0, 128, 0.541);
     z-index: 999;
     transition: all 0.5s ease;
 }

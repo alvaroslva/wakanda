@@ -58,7 +58,6 @@ function fecharTudo(){
     x.classList.add('hidden')
 }
 
-fechar.addEventListener('click', fecharTudo)
 
 
 
@@ -321,7 +320,7 @@ function iniciarQuartaCharada(){
                     fechar.classList.remove('hidden')
                 }, 2000);
             }, 3000);
-        }, 500);
+        }, 2000);
     }, 300);
 }
 
@@ -386,3 +385,5 @@ bt7.addEventListener('click', botaoErrado7)
 bt8.addEventListener('click', botaoErrado8)
 bt10.addEventListener('click', botaoErrado10)
 bt11.addEventListener('click', botaoErrado11)
+
+fechar.addEventListener('click', fecharTudo)
