@@ -31,7 +31,7 @@ let swiper = new Swiper(".slide-content", {
         },
     },
     autoplay: {
-        delay: 6000,
+        delay: 8000,
     },
 });
 
@@ -68,6 +68,6 @@ let swiper2 = new Swiper(".slide-content2", {
         },
     },
     autoplay: {
-        delay: 8000,
+        delay: 9000,
     },
 });

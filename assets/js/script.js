@@ -23,6 +23,47 @@ let titulo5 = document.querySelector('.ch-tit5')
 
 let paginaEspecial = document.querySelector('.pagina-especial')
 
+let fechar = document.querySelector('.fechar')
+
+
+function fecharTudo(){
+    fundoEscuro.classList.remove('visible')
+    charada.classList.remove('visible')
+    titulo.classList.remove('visible')
+    titulo2.classList.remove('visible')
+    titulo3.classList.remove('visible')
+    titulo4.classList.remove('visible')
+    titulo5.classList.remove('visible')
+    charada2.classList.remove('visible')
+    charada3.classList.remove('visible')
+    charada4.classList.remove('visible')
+    paginaEspecial.classList.remove('visible')
+
+    fechar.classList.remove('visible')
+    fechar.classList.add('hidden')
+
+    fundoEscuro.classList.add('hidden')
+    charada.classList.add('hidden')
+    titulo.classList.add('hidden')
+    titulo2.classList.add('hidden')
+    titulo3.classList.add('hidden')
+    titulo4.classList.add('hidden')
+    titulo5.classList.add('hidden')
+    charada2.classList.add('hidden')
+    charada3.classList.add('hidden')
+    charada4.classList.add('hidden')
+    paginaEspecial.classList.add('hidden')
+
+
+    x.classList.add('hidden')
+}
+
+fechar.addEventListener('click', fecharTudo)
+
+
+
+
+
 let bt1 = document.querySelector('#bt1')
 let bt2 = document.querySelector('#bt2')
 let bt4 = document.querySelector('#bt4')
@@ -122,13 +163,8 @@ function botaoErrado11(){
 
 
 
-
-
-
-
-
-
 function iniciarCharada(){
+    
     fundoEscuro.classList.remove('hidden')
     titulo.classList.remove('hidden')
 
@@ -140,6 +176,8 @@ function iniciarCharada(){
         titulo.classList.add('hidden')
         
         setTimeout(() => {
+            fechar.classList.remove('hidden')
+            fechar.classList.add('visible')
             charada.classList.remove('hidden')
             charada.classList.add('visible')
         }, 1000);
@@ -150,6 +188,8 @@ function iniciarSegundaCharada(){
     // acertou = pisca verde
     btCerto.classList.add('btGreen')
     fundoEscuro.classList.add('fundoGreen')
+    fechar.classList.remove('visible')
+    fechar.classList.add('hidden')
     
     setTimeout(() => {
         // fim pisca verde
@@ -172,6 +212,7 @@ function iniciarSegundaCharada(){
                 // entra tela: "Segunda Charada"
                 titulo2.classList.add('visible')
                 titulo2.classList.remove('hidden')
+
                 
                 setTimeout(() => {
                     // sai tela: "Segunda Charada"
@@ -181,6 +222,9 @@ function iniciarSegundaCharada(){
                     // entra charada2
                     charada2.classList.add('visible')
                     charada2.classList.remove('hidden')
+
+                    fechar.classList.add('visible')
+                    fechar.classList.remove('hidden')
                 }, 2000);
             }, 3000);
         }, 500);
@@ -191,6 +235,10 @@ function iniciarSegundaCharada(){
 function iniciarTerceiraCharada(){
     btCerto2.classList.add('btGreen')
     fundoEscuro.classList.add('fundoGreen')
+
+    fechar.classList.remove('visible')
+    fechar.classList.add('hidden')
+
     setTimeout(() => {
         // fim pisca verde
         fundoEscuro.classList.remove('fundoGreen')
@@ -221,6 +269,10 @@ function iniciarTerceiraCharada(){
                     // entra charada3
                     charada3.classList.add('visible')
                     charada3.classList.remove('hidden')
+
+                    fechar.classList.add('visible')
+                    fechar.classList.remove('hidden')
+
                 }, 2000);
             }, 3000);
         }, 500);
@@ -230,6 +282,10 @@ function iniciarTerceiraCharada(){
 function iniciarQuartaCharada(){
     btCerto3.classList.add('btGreen')
     fundoEscuro.classList.add('fundoGreen')
+
+    fechar.classList.remove('visible')
+    fechar.classList.add('hidden')
+
     setTimeout(() => {
         // fim pisca verde
         fundoEscuro.classList.remove('fundoGreen')
@@ -260,6 +316,9 @@ function iniciarQuartaCharada(){
                     // entra charada4
                     charada4.classList.add('visible')
                     charada4.classList.remove('hidden')
+
+                    fechar.classList.add('visible')
+                    fechar.classList.remove('hidden')
                 }, 2000);
             }, 3000);
         }, 500);
@@ -270,6 +329,10 @@ function iniciarQuartaCharada(){
 function encerramento(){
     btCerto4.classList.add('btGreen')
     fundoEscuro.classList.add('fundoGreen')
+
+    fechar.classList.remove('visible')
+    fechar.classList.add('hidden')
+
     setTimeout(() => {
         // fim pisca verde
         fundoEscuro.classList.remove('fundoGreen')
@@ -301,6 +364,8 @@ function encerramento(){
                     paginaEspecial.classList.add('visible')
                     paginaEspecial.classList.remove('hidden')
                
+                    fechar.classList.add('visible')
+                    fechar.classList.remove('hidden')
                 }, 2000);
             }, 3000);
         }, 500);
