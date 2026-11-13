@@ -358,5 +358,23 @@
 
     <!-- FIM RODAPÉ -->
 
+    <script>
+      const nav = document.querySelector('nav');
+      const ul = nav.querySelector('ul');
+    
+      const btn = document.createElement('button');
+      btn.className = 'hamburguer';
+      btn.setAttribute('aria-label', 'Abrir menu');
+      btn.innerHTML = '<span></span><span></span><span></span>';
+      ul.appendChild(btn);
+    
+      btn.addEventListener('click', () => nav.classList.toggle('aberto'));
+    
+      // fecha o menu ao clicar em um link
+      ul.querySelectorAll('a').forEach(a =>
+        a.addEventListener('click', () => nav.classList.remove('aberto'))
+      );
+    </script>
+
 </body>
 </html>
