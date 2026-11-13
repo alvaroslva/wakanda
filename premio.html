@@ -82,6 +82,50 @@
     </footer>
 
     <!-- FIM RODAPÉ -->
+
+    <script>
+  const galeria = document.querySelector('.fotos');
+  const celular = window.matchMedia('(max-width: 640px)');
+  let indice = 0;
+  let pausado = false;
+  let retomar;
+
+  function irPara(i) {
+    const fotos = galeria.children;
+    const foto = fotos[i];
+    galeria.scrollTo({
+      left: foto.offsetLeft - (galeria.clientWidth - foto.offsetWidth) / 2,
+      behavior: 'smooth'
+    });
+  }
+
+  setInterval(() => {
+    if (!celular.matches || pausado) return;
+    indice = (indice + 1) % galeria.children.length;
+    irPara(indice);
+  }, 3500);
+
+  // pausa quando o usuário mexe, e retoma 5s depois
+  ['touchstart', 'pointerdown'].forEach(ev =>
+    galeria.addEventListener(ev, () => {
+      pausado = true;
+      clearTimeout(retomar);
+    }, { passive: true })
+  );
+
+  galeria.addEventListener('scroll', () => {
+    // mantém o índice sincronizado com o que o usuário deslizou
+    const centro = galeria.scrollLeft + galeria.clientWidth / 2;
+    let maisPerto = 0, menor = Infinity;
+    [...galeria.children].forEach((f, i) => {
+      const d = Math.abs(f.offsetLeft + f.offsetWidth / 2 - centro);
+      if (d < menor) { menor = d; maisPerto = i; }
+    });
+    indice = maisPerto;
+    clearTimeout(retomar);
+    retomar = setTimeout(() => pausado = false, 5000);
+  }, { passive: true });
+</script>
     
 </body>
 </html>
