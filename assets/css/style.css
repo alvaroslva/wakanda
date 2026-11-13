@@ -10,12 +10,18 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
 body{
     background-color: black;
     transition: opacity 1s ease-in-out;
     opacity: 1;
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
 }
 
 /* CABEÇALHO */
@@ -32,12 +38,13 @@ nav{
 
 nav ul{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: clamp(8px, 2.5vw, 40px);
     list-style: none;
-    
-    font-size: 26px;
+
+    font-size: clamp(14px, 2.2vw, 26px);
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -65,7 +72,8 @@ h1.titulo{
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 40px;
-    font-size: 48px;
+    font-size: clamp(26px, 5vw, 48px);
+    padding: 0 15px;
 }
 
 img#banner-sesi-pira{
@@ -76,10 +84,10 @@ img#banner-sesi-pira{
 
 div.swiper{
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 50px;
     margin-top: 10px;
-
 }
 
 div.slide-content, .slide-content2{
@@ -93,7 +101,6 @@ div.carrossel{
 }
 
 div.swiper div.swiper-pagination{
-    /* background-image: linear-gradient(to bottom, transparent, rgba(128, 0, 128, 0.29), transparent); */
     padding: 5px;
     border-radius: 5px;
 }
@@ -112,6 +119,8 @@ div.humano{
     flex-direction: column;
     justify-content: center;
     width: 300px;
+    max-width: 100%;
+    margin: 0 auto;
     align-items: center;
     background-image: linear-gradient(to bottom, purple, rgb(44, 1, 50));
 }
@@ -149,11 +158,13 @@ footer{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
     margin-top: 50px;
 }
 
 div.redes-sociais{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -205,6 +216,7 @@ p#arroba{
     left: 0;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     z-index: 999;
     backdrop-filter: blur(15px); /* Desfoque do fundo */
     transition: all 0.5s ease;
@@ -214,14 +226,14 @@ p#arroba{
     position: fixed;
     top: 20px;
     right: 20px;
-    padding: 30px;
+    padding: clamp(12px, 3vw, 30px);
     text-align: center;
     font-weight: bold;
-    font-size: 25px;
+    font-size: clamp(16px, 3vw, 25px);
     cursor: pointer;
     border-radius: 30px;
     background-color: rgba(128, 0, 128, 0.541);
-    z-index: 999;
+    z-index: 10000;
     transition: all 0.5s ease;
 }
 
@@ -233,26 +245,39 @@ p#arroba{
     background-color: rgb(157, 0, 0);
 }
 
-.ch-titulo{
+/* Caixas centrais (título, charada e prêmio) */
+
+.ch-titulo,
+.charada,
+.pagina-especial{
     background-image: linear-gradient(to bottom right, rgba(128, 0, 94, 0.8), rgba(50, 0, 121, 0.8));
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1200px;
-    height: 600px;
+    width: min(1200px, 92vw);
+    min-height: min(600px, 80vh);
+    max-height: 90vh;
+    overflow-y: auto;
     z-index: 9999;
-    
-    padding: 50px 100px;
+
+    padding: clamp(20px, 5vw, 50px) clamp(16px, 8vw, 100px);
     border-radius: 10px;
-    
+}
+
+.ch-titulo,
+.pagina-especial{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     line-height: 1.5;
-    font-size: 50px;
+    font-size: clamp(24px, 4.5vw, 50px);
+}
+
+.pagina-especial{
+    gap: 30px;
 }
 
 .greenLight h1{
@@ -260,22 +285,8 @@ p#arroba{
 }
 
 .ch-titulo p{
-    font-size: 30px;
+    font-size: clamp(16px, 2.5vw, 30px);
     color: rgb(175, 175, 175);
-}
-
-.charada{
-    background-image: linear-gradient(to bottom right, rgba(128, 0, 94, 0.8), rgba(50, 0, 121, 0.8));
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1200px;
-    height: 600px;
-    z-index: 9999;
-
-    padding: 50px 100px;
-    border-radius: 10px;
 }
 
 .charada .titulo-charada{
@@ -284,7 +295,7 @@ p#arroba{
 }
 
 .charada .text-charada{
-    font-size: larger;
+    font-size: clamp(15px, 2vw, 20px);
     text-indent: 30px;
 }
 
@@ -295,10 +306,11 @@ p#arroba{
 
 .bts-charada{
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: clamp(30px, 8vw, 100px);
 }
 
 .ch-acertou{
@@ -311,10 +323,9 @@ button.bt{
     padding: 10px;
     font-weight: bold;
     border-radius: 10px;
-    transition: all 0.2s ease;
     border: none;
     cursor: pointer;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease, scale 0.2s ease;
 }
 
 .btGreen{
@@ -334,45 +345,114 @@ button.bt:hover{
 
 /* premio */
 
-.pagina-especial{
-    background-image: linear-gradient(to bottom right, rgba(128, 0, 94, 0.8), rgba(50, 0, 121, 0.8));
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1200px;
-    height: 600px;
-    z-index: 9999;
-    
-    padding: 50px 100px;
-    border-radius: 10px;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    line-height: 1.5;
-    font-size: 50px;
-    gap: 30px;
-}
-
 .pagina-especial h2{
-    font-size: 50px;
+    font-size: clamp(24px, 4.5vw, 50px);
 }
 
 .pagina-especial a{
     background-color: white;
     color: purple;
     text-decoration: none;
-    padding: 5px 45px;
+    padding: 5px clamp(20px, 5vw, 45px);
     border-radius: 20px;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: clamp(16px, 2.5vw, 30px);
     transition: all .2s ease;
 }
 
 .pagina-especial a:hover{
     background-color: rgb(199, 0, 199);
     color: white;
+}
+
+
+/* ========== RESPONSIVO ========== */
+
+/* Tablets */
+@media (max-width: 900px){
+    nav ul img{
+        width: 80px;
+    }
+
+    nav li{
+        padding: 10px;
+    }
+
+    div.swiper{
+        padding: 40px 30px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px){
+    nav ul img{
+        width: 60px;
+    }
+
+    nav li{
+        padding: 8px 10px;
+    }
+
+    h1.titulo{
+        margin-bottom: 25px;
+    }
+
+    div.swiper{
+        padding: 30px 10px;
+    }
+
+    /* esconde setas do carrossel (no celular o usuário arrasta) */
+    .swiper-button-next,
+    .swiper-button-prev{
+        display: none !important;
+    }
+
+    div.humano{
+        width: 100%;
+    }
+
+    div.humano p{
+        margin: 12px;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    footer{
+        padding: 30px 15px 15px;
+        margin-top: 30px;
+    }
+
+    .fechar{
+        top: 10px;
+        right: 10px;
+    }
+
+    .charada .text-charada{
+        text-indent: 15px;
+    }
+
+    .bts-charada{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    button.bt{
+        width: 100%;
+        padding: 12px;
+    }
+
+    .pagina-especial{
+        gap: 20px;
+    }
+}
+
+/* Celular deitado (pouca altura) */
+@media (max-height: 500px){
+    .ch-titulo,
+    .charada,
+    .pagina-especial{
+        max-height: 85vh;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
